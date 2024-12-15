@@ -3,13 +3,14 @@ from typing import List, Dict
 
 class Author:
     def __init__(self, id, name):
-        if not isinstance(id, int):
+        if isinstance(id, int):
+            self._id = id
+        else:
             raise TypeError("ID must be an integer / number.")
-        if not isinstance(name, str) or not name.strip():
+        if isinstance(name, str) or not name.strip():
+            self._name = name
+        else:
             raise TypeError("Name must not be an empty string.")
-        
-        self._id = id
-        self._name = name
 
     @property
     def id(self):
