@@ -1,5 +1,5 @@
 from database.connection import Connection
-from typing import List, Dict
+
 
 class Author:
     def __init__(self, id, name):
